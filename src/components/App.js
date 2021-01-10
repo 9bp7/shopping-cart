@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from './Nav';
 import Home from './Home';
 import Shop from './Shop';
+import Cart from './Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ProductDetail from './ProductDetail';
 
 function App() {
+  let [cart, setCart] = useState([]);
+
+  const addToCart = (obj) => {
+    setCart([...cart, obj]);
+  }
+
+  const removeFromCart = (obj) => {
+    console.log('remove from cart function called');
+    let updatedCart = cart;
+    updatedCart.forEach((item, index) => {
+      if(item === obj) {
+        updatedCart.splice(index, 1);
+        return;
+      }
+    })
+    setCart([...updatedCart]);
+  }
+
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Nav cart={cart} />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/shop" component={Shop} />
+          <Route exact path="/shop" component={Shop} />
+          <Route path="/shop/:index" render={(props) => <ProductDetail addToCart={addToCart} {...props} />}/>
+          <Route exact path="/cart">
+            <Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
+          </Route>
         </Switch>
       </div>
     </Router>    

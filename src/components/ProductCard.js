@@ -1,9 +1,13 @@
 import React from 'react';
 
-function ProductCard() {
+function ProductCard(props) {
   return (
     <div className="product-card">
-      <img src="" alt=""/>
+      <div className="product-card-inner">
+        <img src={props.details.src} alt=""/>
+        <p>{props.details.title}</p>
+        <p>{props.details.price} GBP</p>
+      </div>     
     </div>
   );
 }
