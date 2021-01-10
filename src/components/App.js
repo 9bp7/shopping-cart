@@ -14,12 +14,12 @@ function App() {
   }
 
   const removeFromCart = (obj) => {
-    console.log('remove from cart function called');
     let updatedCart = cart;
+    let foundItem = false;
     updatedCart.forEach((item, index) => {
-      if(item === obj) {
+      if(item === obj && !foundItem) {
         updatedCart.splice(index, 1);
-        return;
+        foundItem = true;
       }
     })
     setCart([...updatedCart]);

@@ -7,47 +7,47 @@ const products = [
   {
     title: 'AlphaTauri AT01',
     src: '/img/alphatauri.png',
-    price: '12,000,000',
+    price: '15,500,000',
   },
   {
     title: 'Ferrari SF1000',
     src: '/img/ferrari.png',
-    price: '12,000,000',
+    price: '25,100,001',
   },
   {
     title: 'Haas VF-20',
     src: '/img/haas.png',
-    price: '12,000,000',
+    price: '11,000,000',
   },
   {
     title: 'McLaren MCL35',
     src: '/img/mclaren.png',
-    price: '12,000,000',
+    price: '20,000,000',
   },
   {
     title: 'Mercedes F1 W11',
     src: '/img/mercedes.png',
-    price: '12,000,000',
+    price: '27,777,777',
   },
   {
     title: 'Racing Point RP20',
     src: '/img/racingpoint.png',
-    price: '12,000,000',
+    price: '18,500,000',
   },
   {
     title: 'Red Bull RB16',
     src: '/img/redbull.png',
-    price: '12,000,000',
+    price: '21,000,000',
   },
   {
     title: 'Renault R.S.20',
     src: '/img/renault.png',
-    price: '12,000,000',
+    price: '17,000,000',
   },
   {
     title: 'Williams FW43',
     src: '/img/williams.png',
-    price: '12,000,000',
+    price: '9,500,000',
   },
 ]
 

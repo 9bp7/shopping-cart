@@ -34,9 +34,18 @@ function Cart(props) {
     setCartTotal(totalPrice);
   }
 
+  const addToCart = (item) => {
+    props.addToCart(item);
+  }
+
   const removeFromCart = (item) => {
     props.removeFromCart(item);
   }
+
+  useEffect(() => {
+    initCart();
+    condenseCart();
+  }, [props.cart])
 
   useEffect(() => {
     initCart();
@@ -57,7 +66,7 @@ function Cart(props) {
               ? <tr>
                   <th><img src={item.src} alt='' /></th>
                   <th>{item.title}</th>
-                  <th><span className="btn-basket" onClick={() => removeFromCart(item)}>−</span> {item.quantity} <span className="btn-basket">＋</span></th>
+                  <th><span className="btn-basket" onClick={() => removeFromCart(item)}>−</span> {item.quantity} <span className="btn-basket" onClick={() => addToCart(item)}>＋</span></th>
                   <th>{numberWithCommas((+item.price.split(',').join('')) * item.quantity)} GBP</th>
                 </tr>
               : null
