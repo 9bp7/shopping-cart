@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import getProductArray from './ProductsData';
 import {Link} from 'react-router-dom';
 
 function ProductDetail(props) {
+  let [showCartButton, setShowCartButton] = useState(false);
   const products = getProductArray();
 
-  console.log(props);
+  const addToCart = () => {
+    props.addToCart(products[props.match.params.index]);
+    setShowCartButton(true);
+  }
 
   return (
     <div className="wrap shop product-detail">
@@ -13,7 +17,11 @@ function ProductDetail(props) {
       <h1>{products[props.match.params.index].title}</h1>
       <img src={products[props.match.params.index].src} alt={products[props.match.params.index].title} />
       <p>Price: {products[props.match.params.index].price} GBP</p>
-      <button onClick={() => props.addToCart(products[props.match.params.index])}>Add to basket</button>
+      <button onClick={addToCart}>Add to basket</button>
+      { showCartButton
+        ? <Link to="/cart"><button>Go to checkout &raquo;</button></Link>
+        : null
+      }
     </div>
   );
 }
