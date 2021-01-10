@@ -81,7 +81,7 @@ function Cart(props) {
               <th></th>
               <th></th>
               <th></th>
-              <th><button>Race to checkout &raquo;</button>  </th>
+              <th><button>Race to payment &raquo;</button>  </th>
             </tr>          
           </table>   
         </div>
