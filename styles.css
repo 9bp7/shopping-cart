@@ -88,6 +88,14 @@ nav .wrap {
     padding-left: 30px;
   }
 
+  nav a {
+    transition: 0.2s;
+  }
+
+  nav a:hover {
+    color: rgb(255, 246, 204);
+  }
+
   .home {
     text-align: center;
     display: flex;
