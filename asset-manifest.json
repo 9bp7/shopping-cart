@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "https://9bp7.github.io/shopping-cart/static/js/main.679b8b4b.chunk.js",
-    "main.js.map": "https://9bp7.github.io/shopping-cart/static/js/main.679b8b4b.chunk.js.map",
+    "main.js": "https://9bp7.github.io/shopping-cart/static/js/main.82f0dbc0.chunk.js",
+    "main.js.map": "https://9bp7.github.io/shopping-cart/static/js/main.82f0dbc0.chunk.js.map",
     "runtime-main.js": "https://9bp7.github.io/shopping-cart/static/js/runtime-main.a70dba9f.js",
     "runtime-main.js.map": "https://9bp7.github.io/shopping-cart/static/js/runtime-main.a70dba9f.js.map",
     "static/js/2.f56e1f8d.chunk.js": "https://9bp7.github.io/shopping-cart/static/js/2.f56e1f8d.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.a70dba9f.js",
     "static/js/2.f56e1f8d.chunk.js",
-    "static/js/main.679b8b4b.chunk.js"
+    "static/js/main.82f0dbc0.chunk.js"
   ]
 }
