@@ -9,7 +9,8 @@ body {
   line-height: 1.15;
 }
 
-* {
+*,
+body {
   font-family: 'Fraunces', serif;
 }
 
