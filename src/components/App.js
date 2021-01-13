@@ -29,7 +29,7 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Nav cart={cart} />
-        <Switch>
+        <Switch> 
           <Route exact path="/" component={Home} />
           <Route exact path="/shop" component={Shop} />
           <Route path="/shop/:index" render={(props) => <ProductDetail addToCart={addToCart} {...props} />}/>
