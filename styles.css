@@ -197,9 +197,14 @@ nav .wrap {
     max-width: 300px;
   }
 
+  .cart tr:not(:last-of-type) {
+    border-bottom: 1px solid rgb(97, 94, 86);
+  }
+
   .cart th {
     width: 20%;
     padding: 30px 0;
+    vertical-align: middle;
   }
 
   .cart tr th:first-of-type {
