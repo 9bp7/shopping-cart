@@ -15,7 +15,7 @@ function ProductDetail(props) {
     <div className="wrap shop product-detail">
       <Link to="/shop"><p class="back">‹ Back to shop</p></Link>
       <h1>{products[props.match.params.index].title}</h1>
-      <img src={process.env.PUBLIC_URL + products[props.match.params.index].src} alt={products[props.match.params.index].title} />
+      <img src={'%PUBLIC_URL%' + products[props.match.params.index].src} alt={products[props.match.params.index].title} />
       <p>Price: {products[props.match.params.index].price} GBP</p>
       <button onClick={addToCart}>Add to basket</button>
       { showCartButton

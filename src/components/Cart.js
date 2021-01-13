@@ -64,7 +64,7 @@ function Cart(props) {
             { allProducts.map(item => (
               item.quantity > 0 
               ? <tr>
-                  <th><img src={process.env.PUBLIC_URL + item.src} alt='' /></th>
+                  <th><img src={'%PUBLIC_URL%' + item.src} alt='' /></th>
                   <th>{item.title}</th>
                   <th><span className="btn-basket" onClick={() => removeFromCart(item)}>−</span> {item.quantity} <span className="btn-basket" onClick={() => addToCart(item)}>＋</span></th>
                   <th>{numberWithCommas((+item.price.split(',').join('')) * item.quantity)} GBP</th>
