@@ -155,6 +155,10 @@ nav .wrap {
     margin: 30px 0;
   }
 
+  .product-detail p:first-of-type {
+    margin-bottom: 15px;
+  }
+
   .product-detail .back {
     margin-bottom: 15px;
   }
