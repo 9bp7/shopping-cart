@@ -20,7 +20,7 @@ function ProductDetail(props) {
       <p>{products[props.match.params.index].price} GBP</p>
       <button onClick={addToCart}>Add to basket</button>
       { showCartButton
-        ? <Link to="/cart"><button>Go to checkout &raquo;</button></Link>
+        ? <Link to="/cart"><button>Finished shopping? Go to basket &raquo;</button></Link>
         : null
       }
     </div>

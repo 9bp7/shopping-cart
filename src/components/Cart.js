@@ -10,7 +10,6 @@ function Cart(props) {
     return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
   }
 
-
   const initCart = () => {
     setCartTotal(0);
     allProducts.forEach(product => {
@@ -81,7 +80,12 @@ function Cart(props) {
               <th></th>
               <th></th>
               <th></th>
-              <th><button>Race to payment &raquo;</button>  </th>
+              <th><button onClick={() => {
+                alert(`Please press OK or Enter to process your payment of \n\n\t${numberWithCommas(cartTotal)} GBP\n\nPlease note that we do not offer refunds.`);
+                setTimeout(() => {
+                  alert('Payment declined: Insufficent funds.');
+                }, 1000)
+              }}>Race to payment &raquo;</button>  </th>
             </tr>          
           </table>   
         </div>
