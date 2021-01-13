@@ -59,6 +59,7 @@ function Cart(props) {
       <div className="wrap">      
         <div className="shop cart">
           <Link to="/shop"><p class="back">‹ Back to shop</p></Link>
+          <h1 style={{textAlign: 'left'}}>Your Basket</h1>
           <table> 
             { allProducts.map(item => (
               item.quantity > 0 

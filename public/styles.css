@@ -20,6 +20,14 @@ a:visited {
   text-decoration: none;
 }
 
+a {
+  transition: 0.2s;
+}
+
+a:hover {
+  color: rgb(255, 246, 204);
+}
+
 .wrap {
   width: 91%;
   max-width: 1350px;
@@ -49,6 +57,7 @@ button {
 
   button:hover {
     filter: brightness(1.1);
+    color: #fff;
   }
 
   .btn-basket {
@@ -58,7 +67,7 @@ button {
   }
 
     .btn-basket:hover {
-      color: lightskyblue;
+      color: rgb(255, 246, 204);
     }
 
 
@@ -86,14 +95,6 @@ nav .wrap {
   nav li {
     display: inline-block;
     padding-left: 30px;
-  }
-
-  nav a {
-    transition: 0.2s;
-  }
-
-  nav a:hover {
-    color: rgb(255, 246, 204);
   }
 
   .home {
@@ -140,6 +141,11 @@ nav .wrap {
         padding: 20px;  
         transition: 0.2s;
       }
+
+        a .product-card,
+        a:hover .product-card {
+          color: #fff;
+        }
 
         .product-card-inner:hover {
           filter: brightness(1.2);
